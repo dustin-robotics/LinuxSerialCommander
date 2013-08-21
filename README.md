@@ -54,4 +54,45 @@ WPA connection so well, I decided to wait to finish this feature.
  3. Sends password to Python script running on server, which then exits that
     routine :)
 
+Development Environment
+=======================
+
+This set of programs was developed in Crunchbang Linux (Debian 7 stable,
+openbox, tint2). To program the Arduino, I used Arduino-mk in combination with
+my Lscreamer python script. LScreamer lets you flash over unreliable networks
+(wireless, wifi, ethernet).
+
+Arduino-mk: https://github.com/sudar/Arduino-Makefile/
+
+LScreamer: http://sourceforge.net/projects/lscreamer/files/bin/
+
+The hotkeys are matched with an ~/.config/openbox/rc.xml, which can be found in
+this repo.
+
+How to get started
+==================
+
+ 1. Get arduino + LCD character backpack as shown on my blog,
+    http://mecharobotics.wordpress.com.
+ 2. Using the Arduino software on your PC, load CPUduino.ino.  Program it to
+    the Arduino + LCD board (you could use arduino-mk + LScreamer for this as
+well)
+ 3. Install python 2.7+, python-serial, xautomation on the host.
+ 4. Run "python MicroSync.py -i /dev/ttyXXXX -s ~/start/filebrowser/here
+      Note: XXXX for me was USB0, for you it may be different.
+ 5. Compare hotkeys.py with the hotkeys defined in your ~/.config/???.xml file
+      Note: ??? for me was rc, my rc.xml is included as a reference.
+ 6. Now your running!
+
+Links
+=====
+
+My Blog: http://mecharobotics.wordpress.com
+
+Video of it in action: https://vimeo.com/72785300
+
+Arduino-mk: https://github.com/sudar/Arduino-Makefile/
+
+LScreamer: http://sourceforge.net/projects/lscreamer/files/bin/
+
 
